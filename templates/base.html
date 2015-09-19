@@ -34,6 +34,7 @@
     {% if TAG_FEED_RSS and tag %}
     <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
     {% endif %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/poole.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/syntax.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/lanyon.css"/>
@@ -42,15 +43,15 @@
     {% endblock head %}
   </head>
 
-  <body class="sidebar-overlay">
+  <body>
     {% include 'sidebar.html' %}
     <div class="wrap">
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
             <a href="{{ SITEURL }}/" title="Home">{{ SITENAME }}</a>
-            {% if SITEDESCRIPTION %}
-            <small>{{ SITEDESCRIPTION }}</small>
+            {% if SITESUBTITLE %}
+            <small>{{ SITESUBTITLE }}</small>
             {% endif %}
           </h3>
         </div>

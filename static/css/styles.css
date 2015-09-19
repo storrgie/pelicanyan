@@ -32,3 +32,13 @@ td img {
 .muted {
   color: #9a9a9a !important;
 }
+
+.sidebar-social li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/*  Remove Text Decoration and Link Underline from Font-Awesome with CSS */
+.sidebar-social li a {
+    text-decoration: none;
+}
