@@ -24,6 +24,12 @@
     <span class="post-date">{{ article.locale_date }}</span>
 
     {{ article.content }}
+
+    {% if article.modified %}
+        <p>
+        Last updated: {{ article.locale_modified }}
+        </p>
+    {% endif %}
   </div>
 </div>
 {% endblock %}
